@@ -23,7 +23,7 @@
     <nav class="bg-green-100 p-4 flex items-center justify-between shadow-xl sticky top-0 z-10">
         <h1 class="text-2xl mx-4">GREENDEN</h1>
 
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6  md:hidden ">
+        <svg id="menuicon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6  md:hidden cursor-pointer">
             <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
           </svg>
 
@@ -39,15 +39,32 @@
             </li>
         </ul>
      </nav>
+     <!-- side Navbar -->
+     <section id="sidenav" class="bg-green-100 fixed z-10 top-0 transition-all duration-1000" style="width: 50%; height: 100vh; right: -50%;">
+        <div id="" class="text-right p-5">
+            <p id="close-nav" class="cursor-pointer inline">X</p>
+        </div>
+     <ul class="flex flex-col gap-10 items-center text-gray-600 ">
+        <li >
+            <a class="hover:underline hover:text-black" href="index.html">Home</a>
+        </li>
+        <li>
+            <a class="hover:underline hover:text-black" href="product.html">Product</a>
+        </li>
+        <li>
+            <a class="hover:underline hover:text-black" href="contact.html">Contact</a>
+        </li>
+    </ul>
+</section>
      <!-- our products -->
       <section >
         <div class="text-center p-5">
             <h1 class="text-3xl font-bold">Our Products</h1>
-            <input class="border border-black p-3 rounded-3xl m-2" style="width: 60%;" placeholder="Search for our products..">
+            <input id="search" class="border border-black p-3 rounded-3xl m-2" style="width: 60%;" placeholder="Search for our products..">
         </div>
     </section>
       <section class="text-center">
-        <div class="grid grid-cols-2 mt-10 gap-5 md:grid-cols-4">
+        <div id="product-container" class="grid grid-cols-2 mt-10 gap-5 md:grid-cols-4">
             <div>
                 <img src="./images/product-1.png" alt="flowerpot" class="inline hover:shadow-xl transform hover:-translate-y-2">
                 <h3>Peony</h3>
@@ -96,5 +113,10 @@
         <p class="p-2">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro, asperiores!</p>
         <p class="p-2">&copy; 2021 Greenden.com</p> 
     </section>
+
+    <!-- JavaScript -->
+    <script src="index.js">
+
+    </script>
 </body>
 </html>
